@@ -1,0 +1,29 @@
+font-family = CaskaydiaMono Nerd Font
+font-size = 14
+
+theme = MaterialDesignColors
+
+shell-integration-features = no-cursor
+cursor-style = block
+
+# Reload config
+keybind = alt+r=reload_config
+
+# Navigate splits with alt + arrows 
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
+
+# Create splits with ctrl + arrows 
+keybind = ctrl+left=new_split:left
+keybind = ctrl+right=new_split:right
+keybind = ctrl+up=new_split:up
+keybind = ctrl+down=new_split:down
+
+# Split management extras
+keybind = alt+equal=equalize_splits
+keybind = alt+enter=toggle_split_zoom
+
+
+# window-decoration = true

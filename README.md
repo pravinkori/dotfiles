@@ -11,19 +11,16 @@ This repository helps me keep my setup consistent across machines and makes it e
 
 ## Requirements
 
-Make sure you have the following packages installed on your system
+Before using these dotfiles, make sure the following tools are installed on your system:
 
-### Git
-
-```
-pacman -S git
-```
-
-### Stow
-
-```
-pacman -S stow
-```
+- **zsh** → Shell (used as default shell)
+- **git** → Version control
+- **stow** → Symlink manager for dotfiles
+- **neovim** (>= 0.9) → Text editor, configured with LazyVim
+- **tmux** → Terminal multiplexer
+- **fzf** (optional) → Fuzzy finder for enhanced navigation
+- **ripgrep** (optional) → Fast file search for Neovim/Telescope
+- **ghostty** or another terminal (optional) → Terminal emulator config
 
 ## Installation
 

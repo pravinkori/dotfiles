@@ -1,0 +1,57 @@
+# -------------------------
+# Dotfiles repo .gitignore
+# -------------------------
+
+# Shell histories
+.zsh_history
+.zsh_sessions
+.bash_history
+
+# Local overrides
+.zshrc.local
+.vimrc.local
+.config/nvim/local.vim
+.config/nvim/init.local.lua
+
+# Tmux runtime + plugins
+.config/tmux/plugins/
+.tmux.conf.local
+.tmux/resurrect/
+.tmux/plugins/
+
+# Vim/Neovim swap/backup/undo files
+*.swp
+*.swo
+*.un~
+*.bak
+*.tmp
+*.undo
+
+# Cache directories
+.cache/
+.config/nvim/plugged/
+.config/nvim/site/pack/
+.config/nvim/autoload/plug.vim
+
+# Logs
+*.log
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editors/IDEs
+.idea/
+.vscode/
+*.code-workspace
+
+# Compiled stuff
+*.o
+*.so
+*.out
+
+# Secrets (example – adapt to your setup)
+.secrets/
+.env
+.envrc
+

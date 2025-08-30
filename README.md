@@ -27,8 +27,8 @@ Before using these dotfiles, make sure the following tools are installed on your
 Clone the repo into your home directory
 
 ```
-$ git clone https://github.com/pravinkori/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles
+$ git clone https://github.com/pravinkori/dotfiles.git ~/dotfiles
+$ cd ~/dotfiles
 ```
 
 Using GNU stow create symlinks easily

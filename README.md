@@ -39,3 +39,20 @@ Using GNU stow create symlinks easily
 ```
 $ stow .
 ```
+
+## Clean bootstrapping
+This repo includes a .gitignore file to keep runtime files, caches, plugins, and secrets out of Git.
+
+When bootstrapping a new system, plugins will be installed automatically (e.g., with prefix `(ctrl+space) + I` in tmux for TPM, or `:PlugInstall` in Neovim).
+
+### Examples
+
+- **Histories**: .zsh_history, .bash_history
+
+- **Plugins**: ~/.config/tmux/plugins/, ~/.config/nvim/plugged/
+
+- **Cache & swap files**: .cache/, *.swp, *.tmp
+
+- **Local overrides**: .zshrc.local, .tmux.conf.local
+
+- **Secrets**: .env, .secrets/

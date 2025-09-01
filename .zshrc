@@ -14,8 +14,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Completions
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 # Keybindings
 bindkey -e

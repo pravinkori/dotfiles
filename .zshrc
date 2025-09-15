@@ -49,6 +49,8 @@ elif ls -G >/dev/null 2>&1; then
 fi
 alias ll='ls -lha'
 
+export PATH=$PATH:/usr/local/go/bin
+
 # fzf setup
 source <(fzf --zsh)
 

@@ -1,7 +1,7 @@
 font-family = CaskaydiaMono Nerd Font
 font-size = 14
 
-theme = Material Design Colors
+theme = Gruvbox Material
 
 shell-integration-features = no-cursor
 cursor-style = block
@@ -25,5 +25,9 @@ keybind = ctrl+down=new_split:down
 keybind = alt+equal=equalize_splits
 keybind = alt+enter=toggle_split_zoom
 
+window-decoration = true
 
-# window-decoration = true
+split-divider-color = #d79921
+
+window-padding-x = 10
+

@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/pravin/.zsh/completions:"* ]]; then export FPATH="/home/pravin/.zsh/completions:$FPATH"; fi
 	# Created by newuser for 5.9
 # Zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -60,3 +62,13 @@ eval "$(zoxide init zsh)"
 # Starship prompt
 eval "$(starship init zsh)"
 
+export PATH=$PATH:$HOME/go/bin
+
+# pnpm
+export PNPM_HOME="/home/pravin/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+. "/home/pravin/.deno/env"

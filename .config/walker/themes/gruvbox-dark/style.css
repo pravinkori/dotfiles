@@ -1,0 +1,38 @@
+@define-color window_bg_color    #282828; /* background */
+@define-color accent_bg_color    #458588; /* accent */
+@define-color theme_fg_color     #ebdbb2; /* foreground text */
+@define-color error_bg_color     #cc241d; /* error background */
+@define-color error_fg_color     #fbf1c7; /* error text */
+
+/* reset and layout */
+* {
+  all: unset;
+}
+
+.box-wrapper {
+  background: @window_bg_color;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.input {
+  background: lighter(@window_bg_color);
+  color: @theme_fg_color;
+  padding: 8px;
+}
+
+.list {
+  color: @theme_fg_color;
+}
+
+.item-box {
+  border-radius: 8px;
+  padding: 8px;
+}
+
+child:hover .item-box,
+child:selected .item-box {
+  background: @accent_bg_color;
+  color: @window_bg_color;
+}
+

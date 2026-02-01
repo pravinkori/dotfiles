@@ -1,38 +1,144 @@
-@define-color window_bg_color    #282828; /* background */
-@define-color accent_bg_color    #458588; /* accent */
-@define-color theme_fg_color     #ebdbb2; /* foreground text */
-@define-color error_bg_color     #cc241d; /* error background */
-@define-color error_fg_color     #fbf1c7; /* error text */
+/* =========================================================
+ * Modern Gruvbox Dark (Walker)
+ * ========================================================= */
 
-/* reset and layout */
+/* Core palette */
+@define-color bg_main        #282828; /* bg0 */
+@define-color bg_surface     #32302f; /* soft layer */
+@define-color bg_hover       #3c3836; /* bg1 */
+
+@define-color fg_main        #ebdbb2;
+@define-color fg_muted       #a89984;
+
+@define-color accent         #7daea3; /* muted aqua */
+@define-color accent_soft   alpha(#7daea3, 0.35);
+
+@define-color error_bg       #cc241d;
+@define-color error_fg       #fbf1c7;
+
+/* Reset */
 * {
   all: unset;
+  transition: 150ms ease;
 }
 
+/* Window */
 .box-wrapper {
-  background: @window_bg_color;
-  padding: 15px;
+  background: @bg_main;
+  padding: 18px;
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Input */
+.input {
+  background: @bg_surface;
+  color: @fg_main;
+  padding: 12px 14px;
+  border-radius: 12px;
+  caret-color: @accent;
+}
+
+.input placeholder {
+  color: @fg_muted;
+}
+
+/* Results list */
+.list {
+  margin-top: 12px;
+  color: @fg_main;
+}
+
+/* Item */
+.item-box {
+  padding: 12px 14px;
   border-radius: 12px;
 }
 
-.input {
-  background: lighter(@window_bg_color);
-  color: @theme_fg_color;
-  padding: 8px;
+/* Hover / selection */
+child:hover .item-box {
+  background: @bg_hover;
 }
 
-.list {
-  color: @theme_fg_color;
-}
-
-.item-box {
-  border-radius: 8px;
-  padding: 8px;
-}
-
-child:hover .item-box,
 child:selected .item-box {
-  background: @accent_bg_color;
-  color: @window_bg_color;
+  background: @accent_soft;
+}
+
+/* Text */
+.item-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.item-subtext {
+  font-size: 12px;
+  color: @fg_muted;
+}
+
+/* Icons */
+.item-image,
+.item-image-text {
+  margin-right: 12px;
+}
+
+/* Quick activation badge */
+.item-quick-activation {
+  background: alpha(@accent, 0.25);
+  color: @fg_main;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+/* Placeholder & hints */
+.placeholder,
+.elephant-hint {
+  color: @fg_muted;
+}
+
+/* Keybinds */
+.keybinds-wrapper {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid alpha(@fg_muted, 0.15);
+  font-size: 11px;
+  color: @fg_muted;
+}
+
+.keybind-bind {
+  font-weight: 600;
+}
+
+/* Error */
+.error {
+  background: @error_bg;
+  color: @error_fg;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Preview pane */
+.preview {
+  background: @bg_surface;
+  padding: 12px;
+  border-radius: 12px;
+  color: @fg_main;
+}
+
+/* Icon sizes */
+.normal-icons {
+  -gtk-icon-size: 16px;
+}
+
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+/* No scrollbars, ever */
+scrollbar {
+  opacity: 0;
 }
 

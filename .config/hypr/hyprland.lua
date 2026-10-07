@@ -35,7 +35,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "ghostty"
 local fileManager = "nautilus"
-local menu = "hyprlauncher"
+local launcher = "walker"
 local browser = "brave-origin"
 local music = "spotify"
 
@@ -89,7 +89,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
 	general = {
 		gaps_in = 5,
-		gaps_out = 20,
+		gaps_out = 5,
 
 		border_size = 2,
 
@@ -104,7 +104,7 @@ hl.config({
 		-- Please see https://wiki.hypr.land/configuring/extra/tearing/ before you turn this on
 		allow_tearing = false,
 
-		layout = "dwindle",
+		layout = "scrolling",
 	},
 
 	decoration = {
@@ -257,15 +257,20 @@ local secondMod = "SUPER + SHIFT"
 
 -- Example binds, see https://wiki.hypr.land/configuring/core/binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(music))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
+
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
+
 hl.bind(
-	mainMod .. " + M",
+	secondMod .. " + Q",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 

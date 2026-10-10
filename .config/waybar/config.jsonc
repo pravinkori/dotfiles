@@ -33,7 +33,7 @@
         "interval": 30,
         "format": " {percentage}%",
         "tooltip-format": "{used:0.1f}G/{total:0.1f}G used",
-        "on-click": "exec ghostty --title=htop -e htop"
+        "on-click": "exec ghostty --title=btop -e btop"
     },
     "network": {
         "format": "",
